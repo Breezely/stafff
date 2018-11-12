@@ -1,53 +1,13 @@
 const Discord = require('discord.js');
-const fs = require('fs');
-const ms = require('ms');
-const canvas = require('canvas-prebuilt');
-const jimp = require('jimp');
-const ytdl = require('ytdl-core');
-const request = require('request');
-const dateFormat = require('dateformat');
-const google = require('google-it');
-const db = require('quick.db');
-const giphy = require('giphy-api')();    
-const googl = require('goo.gl');  
-const translate = require('google-translate-api');   
-const { Client, Util } = require('discord.js');  
-const UserBlocked = new Set(); 
-const moment = require('moment');
-const pretty = require('pretty-ms'); 
-const zalgo = require('zalgolize');   
-const math = require('math-expression-evaluator'); 
-const stripIndents = require('common-tags').stripIndents;
-const figlet = require('figlet');
 const client = new Discord.Client();
-const prefix = '-'
-const myID = "504707359751536640";
-ti={}  
-spee={};
-
+const prefix = "-";
+const adminprefix = "-";
+const devs = ['252813587188416512'];
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);       
-  console.log(`xRGRx`);	
-});
-
-
-client.on('ready', function(){    
-    var ms = 100000 ;
-    var prefix = "-"; 
-    var setGame = [`Life Style STAFF`,`Beta 1.0`,`Your Mom`];
-    var i = -1;    
-    var j = 0;    
-    setInterval(function (){    
-        if( i == -1 ){    
-j = 1;    
-       }    
-        if( i == (setGame.length)-1 ){    
-            j = -1;    
-      }    
-       i = i+j;    
-        client.user.setGame(setGame[i],`https://www.twitch.tv/julianxdark`);
-}, ms);    
-    
+  client.user.setGame('STAFF BOT','https://www.twitch.tv/peery13');
+  console.log('---------------');
+  console.log(' Bot Is Online')
+  console.log('---------------')
 });
 
 client.on('message', message => {
